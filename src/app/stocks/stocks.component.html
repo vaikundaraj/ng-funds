@@ -1,0 +1,46 @@
+
+<div class="row">   
+    <div class="col-sm-12">
+        <div class="card-box">
+            <h4 class="m-t-0 header-title"><b>Basic Toolbar</b></h4>
+            <p class="text-muted font-13">
+                Example of Basic Toolbar (Your text goes here).
+            </p>
+
+            <table data-toggle="table"
+                   data-search="true"
+                   data-show-refresh="true"
+                   data-show-toggle="true"
+                   data-show-columns="true"
+                   data-sort-name="id"
+                   data-page-list="[5, 10, 20]"
+                   data-page-size="5"
+                   data-pagination="true" data-show-pagination-switch="true" class="table table-bordered table-responsive-md table-striped text-center">
+                <thead>
+                    <tr>
+                        <th data-field="symbol" data-sortable="true" >Symbol</th>
+                        <th data-field="open" data-sortable="true">Open</th>
+                        <th data-field="high" data-align="right" data-sortable="true" >High</th>
+                        <th data-field="low" data-align="right" data-sortable="true">Low</th>
+                        <th data-field="change" data-align="right" data-sortable="true">Change</th>
+                        <th data-field="changePercentage" data-align="right" data-sortable="true">% Change</th>
+                        <th data-field="volume" data-align="right" data-sortable="true" >Volume</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let stock of stocks" >
+                        <td>{{stock.symbol}}</td>
+                        <td>{{stock.open}}</td>
+                        <td>{{stock.high}}</td>
+                        <td>{{stock.low}}</td>
+                        <td>{{stock.change}}</td>
+                        <td>{{stock.changePercentage}}</td>
+                        <td>{{stock.volume}}</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
